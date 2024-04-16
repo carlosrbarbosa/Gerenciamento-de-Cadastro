@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+
+body{ margin:0px 0px 0px 0px}
+
+.footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+.sub_clientes{font-family:Tahoma, Geneva, sans-serif; font-size:16px; color:#09F;  width:98%; padding-left:5px; padding-top:5px; padding-right:5px; height:30px; border:1px dotted #CCCCCC}
+
+.campo_cliente{font-family:Tahoma, Geneva, sans-serif; font-size:16px; color:#333;  width:98%; padding-left:5px; padding-right:5px; height:20px}
+
+.campo_cliente_20{font-family:Tahoma, Geneva, sans-serif; font-size:16px; color:#333;  width:98%; padding-left:5px; padding-right:5px; height:35px}
+
+.campo_cliente_busca{font-family:Tahoma, Geneva, sans-serif; font-size:16px; color:#333;  width:50%; padding-left:5px; padding-right:5px; height:35px}
+
+.informacao_add{font-family:Tahoma, Geneva, sans-serif; font-size:16px; color:#333;  width:98%; padding-left:5px; padding-right:5px; height:75px}
+
+.borda{ border:1px #CCC solid}
+
+.titulo_pagina{font-family:Tahoma, Geneva, sans-serif;border:1px #CCC solid;font-weight:bold;font-size:16px;width:100%;height:40px; background-color:#F5F5F5; padding-left:10px}
+
+.botao_regisrros{width:30px; height:30px; background-image:url(imgtela/editar.png); border:0px; background-color:#FFF}
+
+
+
+.titulo_registro{border:1px #CCC solid; height:30px; font-family:Tahoma, Geneva, sans-serif; font-size:12px; font-weight:bold; padding-left:2px; background-color:#F7F7FB; }
+
+.registros{border:1px #CCC solid; font-size:12px; padding-left:2px; color:#000;	height:30px}
+
+.rodape{border:1px #CCC solid; height:60px;	width:100%; background-color:#2130c7}
+
+.topo{width:100%; border:1px #CCC solid; height:125px; background-color:#FFFFFF}
+
+.logo_topo{float:left; margin-left:10px; margin-top:10px; margin-bottom:10px}
+
+.sair_sistema{ float:right;	padding-right:20px;	padding-top:10px;padding-bottom:10px}
+
+.bemvindo{font-family:Tahoma, Geneva, sans-serif; font-size:14px;color:#000; font-weight:bold; display:block; text-align:right}
+
+.usuario{font-family:Tahoma, Geneva, sans-serif;font-size:14px;color:#ea290c;font-weight:bold;display:block;text-align:left; float:right; padding-top:5px; padding-right:15px}
+
+.desc_campo{text-align:right;padding-right:10px;padding-top:1px;padding-bottom:1px;font-family:Tahoma, Geneva, sans-serif;font-size:12px;color:#666;border:0px; vertical-align:middle}
+
+.campo{text-align:left;padding-left:0px;padding-top:1px;padding-bottom:1px;font-family:Tahoma, Geneva, sans-serif;font-size:12px;color:#666;border:0px}
+
+.botao_chamado {width:150px; height:30px; border:0px; background-image:url(imgtela/abrir_chamado.png); font-size:12.5px; font-weight:bold; color:#F60}
+
+.botao_chamado:hover {width:150px; height:30px; border:0px; background-image:url(imgtela/abrir_chamado_over.png); font-size:12.5px; font-weight:bold; color:#F60}
+
+.botao_fechar_chamado {width:135px; height:30px; border:0px; background-image:url(imgtela/excluir.png); font-size:12.5px; font-weight:bold; color:#FFF}
+
+.botao_fechar_chamado:hover {width:135px; height:30px; border:0px; background-image:url(imgtela/excluir_over.png); font-size:12.5px; font-weight:bold; color:#FFF}
+
+.botao_busca{width:130px; height:30px; background-image:url(imgtela/busca.png); border:0px; background-color:transparent; color:#060}
+
+.botao_busca:hover{width:130px; height:30px; background-image:url(imgtela/busca_over.png); border:0px; background-color:transparent; color:#060
+
+}
+
+
+.botao_historio{width:130px; height:30px; background-image:url(imgtela/adiciona_historico.png); border:0px; background-color:transparent; color:#FFF}
+
+.botao_historio:hover{width:130px; height:30px; background-image:url(imgtela/adiciona_historico_over.png); border:0px; background-color:transparent; color:#FFF
+
+}
+
+.botao{width:135px; height:30px; border:0px; background-image:url(imgtela/fundo_botao.png); font-size:12.5px; font-weight:bold; color:#FFF}
+
+.botao:hover{width:135px; height:30px; background-image:url(imgtela/fundo_botao_over.png)}
+
+a:link, a:visited { text-decoration: none; color:#09F} 
+
+a:hover { text-decoration: underline;  color:#09F} 
+
+a:active { text-decoration: none; color:#09F} 
+
+.valor_total_comissao {border:0px solid #CCC; display:block; font-family:Tahoma, Geneva, sans-serif; font-size:15px; width:100%; height:auto; padding-left:10px;  padding-right:15px; padding-top:5px; padding-bottom:5px; text-align:right}
+
+.total{ text-align:right; padding: 2px 2px 2px 2px; font-family:Tahoma, Geneva, sans-serif; font-size:14px; color:#03F; border:0px}
+
+.campo_senha{ border:0px; width:70px};
+
+

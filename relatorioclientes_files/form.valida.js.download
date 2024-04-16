@@ -1,0 +1,209 @@
+// JavaScript Document
+//Valida Cep 
+function ValidaCep(txtcep){ 
+        exp = /\d{2}\.\d{3}\-\d{3}/ 
+        if(!exp.test(txtcep.value)) 
+                alert('Numero de Cep Invalido!');
+		txtcep.focus();
+}
+// VALIDA FORMULÁRIO DE CONTATO
+function ValidaCliente(ValidaCliente)
+{
+	with (ValidaCliente) {
+		
+		
+		
+		//TELA CADASTRO DE CLIENTE
+		if(txtnome_razao_social.value == ""){
+			alert("Favor preencher o campo Nome / Razão Social!");
+			txtnome_razao_social.focus();
+			return false;
+			}
+		if(txtrg_ie.value == ""){
+			alert("Favor preencher o campo Rg / Ie!");
+			txtrg_ie.focus();
+			return false;
+			}
+		if(txtcpf_cnpj.value == ""){
+			alert("Favor preencher o campo CPF / CNPJ!");
+			txtcpf_cnpj.focus();
+			return false;
+			}
+		if(txtendereco.value == ""){
+			alert("Favor preencher o campo Endereço!");
+			txtendereco.focus();
+			return false;
+			}
+		if(txtcep.value == ""){
+			alert("Favor preencher o campo Cep!");
+			txtcep.focus();
+			return false;
+			}
+			
+		if(txtbairro.value == ""){
+			alert("Favor preencher o campo Bairro!");
+			txtbairro.focus();
+			return false;
+			}
+		if(txttelefone_comercial.value == ""){
+			alert("Favor preencher o campo Telefone Comercial!");
+			txttelefone_comercial.focus();
+			return false;
+			}
+		if(txtcontato.value == ""){
+			alert("Favor preencher o campo Contato!");
+			txtcontato.focus();
+			return false;
+			}
+		if(txtemail.value == ""){
+			alert("Favor preencher o campo Email");
+			txtemail.focus();
+			return false;
+			}
+		if(txtlogin.value == ""){
+			alert("Favor preencher o campo Login");
+			txtlogin.focus();
+			return false;
+			}
+		if(txtsenha.value == ""){
+			alert("Favor preencher o campo Senha");
+			txtsenha.focus();
+			return false;
+			}
+		else {
+			var x = txtemail.value;
+			var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			if (!filter.test(x)) {
+				alert('Formato de E-mail inválido!');
+				txtemail.focus();
+				txtemail.select();
+				return false;
+			}
+		
+		}
+	}
+	return true;
+
+
+}
+function ValidaUsuario(ValidaUsuario)
+{
+	with (ValidaUsuario) {
+		
+		//TELA CADASTRO DE USUARIO
+		if(txtnome.value == ""){
+			alert("Favor preencher o campo Nome!");
+			txtnome.focus();
+			return false;
+			}
+		if(txtemail.value == ""){
+			alert("Favor preencher o campo E-mail!");
+			txtemail.focus();
+			return false;
+			}
+		if(txtconfirma_email.value == ""){
+			alert("Favor preencher o campo Confirma E-mail!");
+			txtconfirma_email.focus();
+			return false;
+			}
+		if (txtconfirma_email.value != txtemail.value){
+			alert("Os email estão diferente!");
+			txtconfirma_email.focus();
+			return false;
+			}
+		if(txtlogin.value == ""){
+			alert("Favor preencher o campo Login!!");
+			txtlogin.focus();
+			return false;
+			}
+		if(txtsenha.value == ""){
+			alert("Favor preencher o campo Senha!!");
+			txtsenha.focus();
+			return false;
+			}
+		else {
+			var x = txtemail.value;
+			var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			if (!filter.test(x)) {
+				alert('Formato de E-mail inválido!');
+				txtemail.focus();
+				txtemail.select();
+				return false;
+			}
+		}
+	}
+	return true;
+}
+function ValidaChamado(ValidaChamado)
+{
+	with (ValidaChamado) {
+		if(txtdescricao_chamado.value == ''){
+			alert("Digite a descrição do chamado");
+			txtdescricao_chamado.focus();
+			return false;
+			}
+						
+		if(txtsolucao.value == ""){
+			alert("para fechar o chamado primeiramente deve preencher o solução !");
+			txtsolucao.focus();
+			return false;
+			}
+		if(txtvalor.value == ""){
+			alert("Informe o valor do serviço!");
+			txtvalor.focus();
+			return false;
+			}
+		if(txtvalorcomissao.value == ""){
+			alert("Informe o valor da comissão, ou digite '0'");
+			txtvalorcomissao.focus();
+			return false;
+			}
+		
+	}
+	return true;
+}
+
+function ValidaAbrirChamado(ValidaAbrirChamado)
+{
+	with (ValidaAbrirChamado) {
+		if(txtdescricao_chamado.value == ''){
+			alert("Digite a descrição do chamado");
+			txtdescricao_chamado.focus();
+			return false;
+			}						
+		if(txtvalor.value == ""){
+			alert("Informe o valor do serviço!");
+			txtvalor.focus();
+			return false;
+			}
+		
+	}
+	return true;
+}
+function ValidaBuscaCliente(ValidaBuscaCliente)
+{
+	with (ValidaBuscaCliente) {
+						
+		if(txtbusca.value == ""){
+			alert("Digite um conteudo para busca.");
+			txtbusca.focus();
+			return false;
+			}
+		
+	}
+	return true;
+}
+
+function ValideAltChamado(ValideAltChamado)
+{
+	with (ValideAltChamado) {
+						
+		if(ddltecnico_atendimento.value == ""){
+			alert("Escolha o Técnico que vai atender o chamado");
+			ddltecnico_atendimento.focus();
+			return false;
+			}
+		
+	}
+	return true;
+}

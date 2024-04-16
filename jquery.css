@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+font-family:verdana;
+font-size:15px;
+}
+
+a {color:#333; text-decoration:none}
+a:hover {color:#ccc; text-decoration:none}
+
+#mask {position:absolute;left:0;top:0;z-index:9000;background-color:#000;display:none;}
+
+
+#boxes .window {position:absolute;left:0;top:0;width:440px;height:200px;display:none;z-index:9999;padding:20px;}
+
+
+
+
+.close{display:block; text-align:right;}
+
+document.addEventListener('DOMContentLoaded', function () {
+    var editarLinks = document.querySelectorAll('.editar');
+    var excluirLinks = document.querySelectorAll('.excluir');
+
+    // Adiciona evento de clique para cada link de editar
+    editarLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
+            var id = extrairIdDoLink(link.getAttribute('href'));
+            // Aqui você pode executar a lógica para editar o cliente com o ID extraído
+            console.log('Editar cliente com ID:', id);
+        });
+    });
+
+    // Adiciona evento de clique para cada link de excluir
+    excluirLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
+            var id = extrairIdDoLink(link.getAttribute('href'));
+            var confirmacao = confirm('Certeza que deseja excluir o cliente? Esta operação não poderá ser desfeita.');
+            if (confirmacao) {
+                // Aqui você pode executar a lógica para excluir o cliente com o ID extraído
+                console.log('Excluir cliente com ID:', id);
+            }
+        });
+    });
+
+    // Função para extrair o ID do link
+    function extrairIdDoLink(url) {
+        var regex = /id=(\d+)/;
+        var match = regex.exec(url);
+        if (match) {
+            return match[1];
+        }
+        return null;
+    }
+});

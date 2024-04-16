@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0053)https://www.versatilclientes.com.br/listaclientes.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Lista clientes &amp; T.I</title>
+<link rel="stylesheet" type="text/css" href="./listaclientes_files/estilo.css">
+<link rel="stylesheet" type="text/css" href="./listaclientes_files/jquery.css">
+</head><body class="vsc-initialized">
+<table width="100%" border="0" align="center" bgcolor="#FFFFFF">
+  <tbody><tr>
+    <td align="center">
+
+
+
+<link rel="stylesheet" type="text/css" href="./listaclientes_files/estilo.css">
+<link rel="stylesheet" type="text/css" href="./listaclientes_files/jquery.css">
+<script type="text/javascript" language="javascript" src="./listaclientes_files/mascara.js.download"></script>
+<script type="text/javascript" language="javascript" src="./listaclientes_files/form.valida.js.download"></script>
+<script type="text/javascript" src="./listaclientes_files/jquery.min.js.download"></script> 
+
+<script type="text/javascript">
+
+$(document).ready(function() {	
+
+	$('a[name=modal]').click(function(e) {
+		e.preventDefault();
+		
+		var id = $(this).attr('href');
+	
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+	
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+
+		$('#mask').fadeIn(2000);	
+		$('#mask').fadeTo("slow",1);	
+	
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+              
+		$(id).css('top',  winH/2-$(id).height()/2);
+		$(id).css('left', winW/2-$(id).width()/2);
+	
+		$(id).fadeIn(1000); 
+	
+	});
+	
+	$('.window .close').click(function (e) {
+		e.preventDefault();
+		
+		$('#mask').hide();
+		$('.window').hide();
+	});		
+	
+	$('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+	});			
+	
+});
+
+</script>
+
+
+<div class="topo" style="background-color:#2130c7; width:100%">
+<span style="float:left">
+ <a href="index.html"><img src="./cadastracliente_files/logo.png" width="324" height="107" border="0"></a>
+<a href="cadastrausuario.html"><img src="./cadastracliente_files/adicionar.png" width="84" height="80" border="0"></a>
+<a href="cadastragrupo.html"><img src="./cadastracliente_files/grupo.png" width="84" height="80" border="0"></a>
+<a href="cadastracliente.html"><img src="./cadastracliente_files/cliente.png" width="84" height="80" border="0"></a> 
+<a href="listausuarios.html"><img src="./cadastracliente_files/lista_usuario.png" width="84" height="80" border="0"></a>
+<a href="listaclientes.html"><img src="./cadastracliente_files/lista_clientes.png" width="84" height="80" border="0"></a>
+<a href="listagrupo.html"><img src="./cadastracliente_files/lista_grupos.png" width="84" height="80" border="0"></a>
+<a href="relatorioclientes.html"><img src="./cadastracliente_files/relatorios.png" width="84" height="80" border="0"></a>
+<!-- <a href="listachamados.php" ><img src="css/imgtela/lista_chamado.png" width="64" height="80" border="0" /></a>-->
+<!-- <a href="listachamadofechado.php" ><img src="css/imgtela/lista_chamado_fechado.png" width="64" height="80" border="0" /></a>-->
+<!-- <a href="#relatorio" name="modal" ><img src="css/imgtela/relatorio.png" width="64" height="80" border="0" /></a>-->
+</span>
+  
+</span>
+
+<span class="usuario"><strong style="color:#FFF">Bem Vindo</strong><br>
+<strong style="color:#FFF">CARLOS</strong><br>
+<a href="#"><img src="./listaclientes_files/sair.png" width="113" height="31" border="0"></a></span>
+</div>
+
+<!-- TELAS DE CADASTRO -->
+<div id="boxes">
+
+<!-- TELA DE CADASTRO USUARIO -->  
+<table id="cadusuario" class="window" width="100%" border="0" bgcolor="#2130c7">
+<form name="form2" id="form2" method="post" action="#" enctype="multipart/form-data" onsubmit="return ValidaUsuario(form2)"></form>
+
+  <tbody><tr>
+    <td colspan="2" class="titulo_pagina" style="color:#06F">CADASTRO DE USUURIOS</td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Nome</td>
+    <td class="campo"><input type="text" name="txtnome" id="txtnome" size="40"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Email</td>
+    <td class="campo"><input name="txtemail" type="text" size="35"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Confirma e-mail</td>
+    <td class="campo"><input name="txtconfirma_email" type="text" size="35"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Login</td>
+    <td class="campo"><input name="txtlogin" type="text"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Senha</td>
+    <td class="campo"><input name="txtsenha" type="password" size="10"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">acesso</td>
+    <td class="campo">
+      <select name="ddlacesso" id="ddlacesso">
+        <option value="Administrador">Administrador</option>
+        <option value="Supervisor">Supervisor</option>
+        <option value="Tecnico">Tecnico</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td class="desc_campo">&nbsp;</td>
+    <td class="desc_campo"> <input name="btinserir" type="submit" class="botao" id="btinserir" value="Inserir"></td>
+  </tr>
+  
+</tbody></table>
+
+<!--ABRIR REL�T�RIO -->
+<form id="relatorio" class="window" name="relatorio" method="post" style="background-color:#FFF; border:1px #F4F4F4 solid; width:auto; height:auto; text-align:left" action="#" enctype="multipart/form-data">
+<span style="width:100%; font-family:Tahoma, Geneva, sans-serif; font-size:18px; font-weight:bold">Relat�rio por Periodo</span><br><br>
+<span class="campo">Data Inicial</span>
+<span class="campo"><input name="txtdata_inicial" type="text" size="15" id="txtdata_inicial" onkeypress="MascaraDataInicial(txtdata_inicial)" maxlength="10"></span>
+<span class="campo">Data Final</span>
+<span class="campo"><input name="txtdata_final" type="text" size="15" id="txtdata_final" onkeypress="MascaraDataFinal(txtdata_final)" maxlength="10"></span>
+<span class="campo"><input name="btbusca" type="submit" id="btbusca" class="botao" value="Abrir"></span>
+</form>
+
+<!--LOCALIZAR CLIENTE PARA ABRIR CHAMADO-->
+<form id="cadchamado" class="window" name="cadchamado" method="post" style="background-color:#FFF; border:1px #F4F4F4 solid; width:auto; height:auto; text-align:left" action="#" enctype="multipart/form-data" onsubmit="return ValidaBuscaCliente(cadchamado)">
+<span style="width:100%; font-family:Tahoma, Geneva, sans-serif; font-size:18px; font-weight:bold">Localizar Cliente</span> 
+<span class="campo"><input name="txtbusca" type="text" size="25" id="txtbusca"> </span>
+<span class="campo"><input name="btbusca" type="submit" id="btbusca" class="botao" value="Localizar"></span>
+</form>
+<!-- TELA DE CADASTRO CLIENTES -->  
+
+<table id="cadcliente" class="window" width="100%" border="0" bgcolor="#f8f8f8">
+<form name="form1" id="form1" method="post" action="#" enctype="multipart/form-data" onsubmit="return ValidaCliente(form1)"></form>
+  <tbody><tr>
+    <td colspan="2" class="titulo_pagina" style="color:#090">CADASTRO DE CLIENTE</td>
+  </tr>
+    <tr>
+    <td class="desc_campo">Nome / Razao Social</td>
+    <td class="campo"><input name="txtnome_razao_social" type="text" size="35" id="txtnome_razao_social"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Rg / Ie</td>
+    <td class="campo"><input name="txtrg_ie" type="text" size="20" id="txtrg_ie"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">CPF / CNPJ</td>
+    <td class="campo"><input name="txtcpf_cnpj" type="text" id="txtcpf_cnpj"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Endereco</td>
+    <td class="campo"><input name="txtendereco" type="text" id="txtendereco" size="40"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Cep</td>
+    <td class="campo"><input name="txtcep" type="text" id="txtcep" size="18" maxlength="9" onkeypress="MascaraCep(txtcep)"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Bairro</td>
+    <td class="campo"><input name="txtbairro" type="text" id="txtbairro" size="25"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Telefone Comercial</td>
+    <td class="campo"><span class="campo">
+      <input name="txttelefone_comercial" type="text" id="txttelefone_comercial" size="15" maxlength="14" onkeypress="MascaraTelComercial(txttelefone_comercial)" )="">
+    </span></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Telefone Celular</td>
+    <td class="campo"><span class="campo">
+      <input name="txttelefone_celular" type="text" id="txttelefone_celular" size="15" maxlength="14" onkeypress="MascaraTelComercial(txttelefone_celular)">
+    </span></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Fax</td>
+    <td class="campo"><span class="campo">
+      <input name="txtfax" type="text" id="txtfax" size="15" maxlength="14" onkeypress="MascaraTelComercial(txtfax)">
+    </span></td>
+  </tr>
+   
+   <tr>
+    <td class="desc_campo">Contato</td>
+    <td class="campo"><span class="campo">
+      <input name="txtcontato" type="text" id="txtcontato" size="15">
+    </span></td>
+  </tr>
+  <tr>
+    <td valign="top" class="desc_campo">Observacao</td>
+    <td class="campo"><textarea name="txtobservacao" id="txtobservacao" cols="40" rows="3"></textarea></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Data Cadastro</td>
+    <td class="campo">
+    <input name="txtdata_cadastro" type="text" id="txtdata_cadastro" size="20" maxlength="10" value="27/03/2024"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Email</td>
+    <td class="campo"><span class="campo">
+      <input name="txtemail" type="text" id="txtemail" size="50">
+    </span></td>
+  </tr>
+  <tr>
+    <td valign="top" class="desc_campo">Login</td>
+    <td class="campo"><input name="txtlogin" type="text" size="25"></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">Senha</td>
+    <td class="campo"><input name="txtsenha" type="password" id="txtsenha" size="15"></td>
+  </tr>
+   <tr>
+    <td class="desc_campo">Status Cliente</td>
+    <td class="campo"><select name="ddlstatus" id="ddlstatus">
+    				<option value="ativo">Ativo</option>
+       				<option value="bloqueado">Bloqueado</option>
+    				  </select></td>
+  </tr>
+  <tr>
+    <td class="desc_campo">&nbsp;</td>
+    <td class="campo"><input name="btinserir" type="submit" class="botao" id="btinserir" value="Inserir"></td>
+  </tr>
+  
+</tbody></table>
+
+<!-- Mascara para cobrir a tela -->
+  <div id="mask"></div>
+</div>
+
+</td>
+  </tr>
+  <tr>
+    <td align="center">
+
+<link rel="stylesheet" type="text/css" href="./listaclientes_files/estilo.css">
+<link rel="stylesheet" type="text/css" href="./listaclientes_files/jquery.css">
+<script type="text/javascript">
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script>
+
+<table width="100%" border="0">
+  <tbody><tr>
+    <td colspan="13" class="titulo_pagina" style="color:#090"><table width="100%" border="0">
+        <tbody><tr>
+          <td width="40%" rowspan="2" align="center"><span style="color:#090">RELA��O DE CLIENTES CADASTRADOS</span></td>
+          <td colspan="2" align="center" style="border:2px solid #CCC">FILTROS</td>
+        </tr>
+        <tr>
+          <td width="30%" style="border:2px solid #CCC"><form id="form1" name="form1" method="post" action="https://www.versatilclientes.com.br/filtrocliente.php" style="width:500px; float:right; vertical-align:middle; text-align:center">
+            <span style="color:#333; font-size:12px; font-family:Tahoma, Geneva, sans-serif">FILTRAR CLIENTE POR REDE</span>
+            <select name="txtfiltrogrupo" id="txtfiltrogrupo" onchange="MM_jumpMenu(&#39;parent&#39;,this,0)" style="width:150px">
+              <option value="listaclientesgrupo.php?descrica=%">- SELECIONE</option>
+                            <option value="listaclientesgrupo.php?descricao=REDE MASTER">REDE MASTER</option>
+                            <option value="listaclientesgrupo.php?descricao=REDE CAXIAS">REDE CAXIAS</option>
+                            
+                            </select>
+          </form></td>
+          <td width="30%" style="border:2px solid #CCC"><form id="form2" name="form1" method="post" action="https://www.versatilclientes.com.br/filtrocliente.php" style="width:500px; float:right; vertical-align:middle; text-align:right">
+            <span style="color:#333; font-size:12px; font-family:Tahoma, Geneva, sans-serif">Filtrar cliente</span>
+            <input name="txtfiltro" id="txtfiltro" type="text">
+            <input name="btfiltro" type="submit" class="botao_busca" value="Localizar">
+          </form></td>
+        </tr>
+    </tbody></table></td>
+  </tr>
+  
+  <tr>
+    <td class="registros">01</td>
+    <td class="registros">AUTO POSTO ZURICK</td>
+    <td class="registros">08.847.240/0001-38</td>
+    <td class="registros">
+    
+    <table width="100%" border="0">
+      <tbody><tr></tr>
+      
+            <tr>
+        <td class="titulo_registro">Estacao: LOJA Anydesk: 000000000 Senha: 0000000</td>
+      </tr>
+            <tr>
+        <td class="titulo_registro">Estacao: LOJA Anydesk: 000000000 Senha: 0000000</td>
+      </tr>
+          </tbody></table></td>
+
+    <td align="center" class="registros"><a href="cadastracliente.html" onclick="editarCliente(725)"><img src="./index1_files/editar.png" width="30" height="30" border="0"></a></td>
+    <td align="center" class="registros"><a href="#" onclick="excluirCliente(725)"><img src="./index1_files/excluir_lista.png" width="30" height="30" border="0"></a></td>
+    </tr>
+  </tr>
+  
+  <script>
+    function editarCliente(id) {
+        // Lógica para editar o cliente com o ID fornecido
+        console.log('Editar cliente com ID:', id);
+    }
+
+    function excluirCliente(id) {
+        var confirmacao = confirm('Certeza que deseja excluir o cliente? Esta operação não poderá ser desfeita.');
+        if (confirmacao) {
+            // Lógica para excluir o cliente com o ID fornecido
+            console.log('Excluir cliente com ID:', id);
+        }
+    }
+</script>
+    
+  <tr>
+    <td class="registros">02</td>
+    <td class="registros">AUTO POSTO DIAMANTE DOIPIRANGA LTDA</td>
+    <td class="registros">40.760.161/0001-06</td>
+    <td class="registros">
+    
+    <table width="100%" border="0">
+      <tbody><tr></tr>
+      
+            <tr>
+        <td class="titulo_registro">Estacao: LOJA Anydesk: 000000000 Senha: 0000000</td>
+      </tr>
+          </tbody></table></td>
+    <td align="center" class="registros"><a href="#"><img src="./index1_files/editar.png" width="30" height="30" border="0"></a></td>
+    <td align="center" class="registros"><a href="#" onclick="return confirm(&#39;Certeza que deseja excluir o cliente AUTO POSTO DIAMANTE DOIPIRANGA LTDA? \n Esta opera��o n�o podera ser disfeita.&#39;) "><img src="./index1_files/excluir_lista.png" width="30" height="30" border="0"></a></td>
+  </tr>
+  
+    
+  <tr>
+    <td class="registros">03</td>
+    <td class="registros">AUTO POSTO MINELLA E MINELLA</td>
+    <td class="registros">64.600.984/0001-24</td>
+    <td class="registros">
+    
+    <table width="100%" border="0">
+      <tbody><tr></tr>
+
+
+            <tr>
+        <td class="titulo_registro">Estacao: LOJA Anydesk: 000000000 Senha: 0000000 </td>
+      </tr>
+          </tbody></table></td>
+    <td align="center" class="registros"><a href="h#"><img src="./index1_files/editar.png" width="30" height="30" border="0"></a></td>
+    <td align="center" class="registros"><a href="#" onclick="return confirm(&#39;Certeza que deseja excluir o cliente AUTO POSTO MINELLA E MINELLA? \n Esta opera��o n�o podera ser disfeita.&#39;) "><img src="./index1_files/excluir_lista.png" width="30" height="30" border="0"></a></td>
+  </tr>
+ 
+  <tr>
+    <td class="registros">04</td>
+    <td class="registros">FU 1000 CONVENIENCIA LAVAGEM E ESTACIONAMENTO LTDA</td>
+    <td class="registros">46.962.917/0001-78</td>
+    <td class="registros">
+    
+    <table width="100%" border="0">
+      <tbody><tr></tr>
+      
+            <tr>
+        <td class="titulo_registro">Estacao: LOJA Anydesk: 000000000 Senha: 0000000 </td>
+      </tr>
+          </tbody></table></td>
+    <td align="center" class="registros"><a href="#"><img src="./index1_files/editar.png" width="30" height="30" border="0"></a></td>
+    <td align="center" class="registros"><a href="#" onclick="return confirm(&#39;Certeza que deseja excluir o cliente FU 1000 CONVENIENCIA LAVAGEM E ESTACIONAMENTO LTDA? \n Esta operacao nao podera ser disfeita.&#39;) "><img src="./index1_files/excluir_lista.png" width="30" height="30" border="0"></a></td>
+  </tr>
+    
+  <tr>
+    <td class="registros">05</td>
+    <td class="registros">AUTO POSTO LAS VEGAS LTDA.</td>
+    <td class="registros">19.084.008/0001-01</td>
+    <td class="registros">
+    
+    <table width="100%" border="0">
+      <tbody><tr></tr>
+      
+            <tr>
+        <td class="titulo_registro">Estacao: LOJA Anydesk: 000000000 Senha: 0000000 </td>
+      </tr>
+          </tbody></table></td>
+    <td align="center" class="registros"><a href="#"><img src="./index1_files/editar.png" width="30" height="30" border="0"></a></td>
+    <td align="center" class="registros"><a href="#" onclick="return confirm(&#39;Certeza que deseja excluir o cliente AUTO POSTO LAS VEGAS LTDA.? \n Esta operacao nao podera ser disfeita.&#39;) "><img src="./index1_files/excluir_lista.png" width="30" height="30" border="0"></a></td>
+  </tr>
+  
+    
+  <tr>
+    <td class="registros">06</td>
+    <td class="registros">POSTO IMPERIO LTDA</td>
+    <td class="registros">51.002.850/0001-85</td>
+    <td class="registros">
+    
+    <table width="100%" border="0">
+      <tbody><tr></tr>
+      
+            <tr>
+        <td class="titulo_registro">Estacao: LOJA Anydesk: 000000000 Senha: 0000000 </td>
+      </tr>
+          </tbody></table></td>
+          <td align="center" class="registros"><a href="#" class="editar"><img src="./index1_files/editar.png" width="30" height="30" border="0"></a></td>
+          <td align="center" class="registros"><a href="#" class="excluir"><img src="./index1_files/excluir_lista.png" width="30" height="30" border="0"></a></td>
+  </tr>
+  
+    
+  
+ </tbody></table>
+ <table width="100%" border="0" align="center" bgcolor="#FFFFFF">
+   <tbody><tr>
+    <td align="center">
+
+
+
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="./listaclientes_files/estilo.css">
+
+
+<table class="rodape" bgcolor="#2130c7">
+  <tbody><tr>
+    <td align="center" style="font-size:12px"><br>
+      <a href="index.html" target="_blank"><img src="./listaclientes_files/logo.png" width="150" height="49"></a><br>
+		<strong style="color:white; font-family:&#39;Courier New&#39;, Courier, monospace; font-size:16px">Todos os Direitos Reservados</strong><br>
+    </td>
+  </tr>
+</tbody></table>
+
+
+</td>
+  </tr>
+  </tbody></table>
+
+
+</td></tr></tbody></table></body></html>
