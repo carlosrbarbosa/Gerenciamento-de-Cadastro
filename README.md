@@ -31,8 +31,6 @@ Carlos Rocha Barbosa - [LinkedIn](https://www.linkedin.com/in/crbarbosa/)
 
 ![Página Inicial](Fotos/paginainicial.png)
 
-![Relatório de Clientes](Fotos/relatorioclientes.png)
-
 ![Cadastro de Cliente](Fotos/cadastracliente.png)
 
 ![Cadastro de Grupo](Fotos/cadastragrupo.png)
