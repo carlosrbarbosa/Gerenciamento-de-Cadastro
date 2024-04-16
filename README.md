@@ -29,21 +29,21 @@ Carlos Rocha Barbosa - [LinkedIn](https://www.linkedin.com/in/crbarbosa/)
 
 ### Screenshots
 
-![Página Inicial](fotos/paginainicial.png)
+![Página Inicial](Fotos/paginainicial.png)
 
-![Relatório de Clientes](fotos/relatorioclientes.png)
+![Relatório de Clientes](Fotos/relatorioclientes.png)
 
-![Cadastro de Cliente](fotos/cadastracliente.png)
+![Cadastro de Cliente](Fotos/cadastracliente.png)
 
-![Cadastro de Grupo](fotos/cadastragrupo.png)
+![Cadastro de Grupo](Fotos/cadastragrupo.png)
 
-![Cadastro de Usuário](fotos/cadastrausuario.png)
+![Cadastro de Usuário](Fotos/cadastrausuario.png)
 
-![Lista de Clientes](fotos/listaclientes.png)
+![Lista de Clientes](Fotos/listaclientes.png)
 
-![Lista de Grupos](fotos/listagrupo.png)
+![Lista de Grupos](Fotos/listagrupo.png)
 
-![Lista de Usuários](fotos/listausuarios.png)
+![Lista de Usuários](Fotos/listausuarios.png)
 
 
 
